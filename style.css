@@ -1,3 +1,12 @@
+:root {
+    --cor-primaria: #9C0024;
+    --cor-secundaria: #fbb0c2;
+    --cor-fundo: #ffffff;
+    --cor-texto: #9C0024;
+    --cor-contraste: #f3eef7;
+    --cor-botao: #f9f9f9;
+}
+
 body {
             background-color: #f8e9ed;
             font-family: Arial, sans-serif;
