@@ -1,29 +1,32 @@
-const botoes = document.querySelectorAll("button");
+const botoesCurtir = document.querySelectorAll(".btn-curtir");
 
-botoes.forEach(function (botao) {
+botoesCurtir.forEach(function (botao) {
     let curtiu = false;
     botao.addEventListener("click", botaoClicado);
+    
     function botaoClicado() {
         console.log("fui clicado");
         let texto = botao.querySelector("span");
         if (curtiu === false){
             texto.textContent++;
             curtiu = true;
-        } else{
+        } else {
             texto.textContent--;
             curtiu = false;
         }
     }
-})
-
-const botaoAlternar = document.getElementById('toggleTheme');
-
-botaoAlternar.addEventListener('click', () => {
-    document.body.classList.toggle('tema-escuro');
-    
-    if (document.body.classList.contains('tema-escuro')) {
-        botaoAlternar.textContent = 'Modo Claro';
-    } else {
-        botaoAlternar.textContent = 'Modo Escuro';
-    }
 });
+
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+
+btnTemaEscuro.addEventListener("click", mudaTema);
+
+function mudaTema() {
+    const corpoPagina = document.body;
+
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}
