@@ -15,3 +15,15 @@ botoes.forEach(function (botao) {
         }
     }
 })
+
+const botaoAlternar = document.getElementById('toggleTheme');
+
+botaoAlternar.addEventListener('click', () => {
+    document.body.classList.toggle('tema-escuro');
+    
+    if (document.body.classList.contains('tema-escuro')) {
+        botaoAlternar.textContent = 'Modo Claro';
+    } else {
+        botaoAlternar.textContent = 'Modo Escuro';
+    }
+});
